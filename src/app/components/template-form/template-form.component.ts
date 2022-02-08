@@ -17,4 +17,14 @@ export class TemplateFormComponent implements OnInit {
   onSubmit(form: any) {
     console.log(form.value);
   }
+
+  checkFieldTouch(field: any) {
+    return !field.valid && field.touched;
+  }
+
+  applyCssError(field: any) {
+    return {
+      'has-error': this.checkFieldTouch(field),
+    };
+  }
 }

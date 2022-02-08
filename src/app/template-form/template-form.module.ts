@@ -1,8 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TemplateFormComponent } from '../components/template-form/template-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [],
-  imports: [CommonModule],
+  declarations: [TemplateFormComponent],
+  imports: [CommonModule, FormsModule],
 })
 export class TemplateFormModule {}

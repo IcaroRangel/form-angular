@@ -15,8 +15,7 @@
       <app-campo-control-erro
         [showError]="checkFieldTouch(nome)"
         errorMessage="Nome é obrigátorio"
-      >
-      </app-campo-control-erro>
+      ></app-campo-control-erro>
     </div>
   </div>
 
@@ -37,128 +36,123 @@
       <app-campo-control-erro
         [showError]="checkFieldTouch(email)"
         errorMessage="E-mail é obrigátorio"
-      >
-      </app-campo-control-erro>
+      ></app-campo-control-erro>
     </div>
   </div>
-
-  <div class="form-group" [ngClass]="applyCssError(cep)">
-    <div class="col-md-3">
-      <label for="cep" class="control-label">CEP</label>
-      <input
-        class="form-control"
-        type="text"
-        name="cep"
-        id="cep"
-        ngModel
-        required
-        #cep="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(cep)"
-        errorMessage="Cep é obrigátorio"
-      >
-      </app-campo-control-erro>
+  <div ngModelGroup="endereço">
+    <div class="form-group" [ngClass]="applyCssError(cep)">
+      <div class="col-md-3">
+        <label for="cep" class="control-label">CEP</label>
+        <input
+          class="form-control"
+          type="text"
+          name="cep"
+          id="cep"
+          ngModel
+          required
+          #cep="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(cep)"
+          errorMessage="Cep é obrigátorio"
+        ></app-campo-control-erro>
+      </div>
+      <div class="col-md-3" [ngClass]="applyCssError(numero)">
+        <label for="numero" class="control-label">Número</label>
+        <input
+          class="form-control"
+          type="text"
+          name="numero"
+          id="numero"
+          ngModel
+          required
+          #numero="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(numero)"
+          errorMessage="Número é obrigátorio"
+        ></app-campo-control-erro>
+      </div>
+      <div class="col-md-6">
+        <label for="complemento" class="control-label">Complemento</label>
+        <input
+          class="form-control"
+          type="text"
+          name="complemento"
+          id="complemento"
+          ngModel
+          #complemento="ngModel"
+        />
+      </div>
     </div>
-    <div class="col-md-3" [ngClass]="applyCssError(numero)">
-      <label for="numero" class="control-label">Número</label>
-      <input
-        class="form-control"
-        type="text"
-        name="numero"
-        id="numero"
-        ngModel
-        required
-        #numero="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(numero)"
-        errorMessage="Número é obrigátorio"
-      >
-      </app-campo-control-erro>
+    <div class="form-group" [ngClass]="applyCssError(rua)">
+      <div class="col-md-12">
+        <label for="rua" class="control-label">Rua</label>
+        <input
+          class="form-control"
+          type="text"
+          name="rua"
+          id="rua"
+          ngModel
+          required
+          #rua="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(rua)"
+          errorMessage="Rua é obrigátorio"
+        >
+        </app-campo-control-erro>
+      </div>
     </div>
-    <div class="col-md-6">
-      <label for="complemento" class="control-label">Complemento</label>
-      <input
-        class="form-control"
-        type="text"
-        name="complemento"
-        id="complemento"
-        ngModel
-        #complemento="ngModel"
-      />
-    </div>
-  </div>
-  <div class="form-group" [ngClass]="applyCssError(rua)">
-    <div class="col-md-12">
-      <label for="rua" class="control-label">Rua</label>
-      <input
-        class="form-control"
-        type="text"
-        name="rua"
-        id="rua"
-        ngModel
-        required
-        #rua="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(rua)"
-        errorMessage="Rua é obrigátorio"
-      >
-      </app-campo-control-erro>
-    </div>
-  </div>
-  <div class="form-group" [ngClass]="applyCssError(bairro)">
-    <div class="col-md-5">
-      <label for="bairro" class="control-label">Bairro</label>
-      <input
-        class="form-control"
-        type="text"
-        name="bairro"
-        id="bairro"
-        ngModel
-        required
-        #bairro="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(bairro)"
-        errorMessage="Bairro é obrigátorio"
-      >
-      </app-campo-control-erro>
-    </div>
-    <div class="col-md-4" [ngClass]="applyCssError(cidade)">
-      <label for="cidade" class="control-label">Cidade</label>
-      <input
-        class="form-control"
-        type="text"
-        name="cidade"
-        id="cidade"
-        ngModel
-        required
-        #cidade="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(cidade)"
-        errorMessage="Cidade é obrigátorio"
-      >
-      </app-campo-control-erro>
-    </div>
-    <div class="col-md-3" [ngClass]="applyCssError(estado)">
-      <label for="estado" class="control-label">Estado</label>
-      <input
-        class="form-control"
-        type="text"
-        name="estado"
-        id="estado"
-        ngModel
-        required
-        #estado="ngModel"
-      />
-      <app-campo-control-erro
-        [showError]="checkFieldTouch(estado)"
-        errorMessage="Estado é obrigátorio"
-      >
-      </app-campo-control-erro>
+    <div class="form-group" [ngClass]="applyCssError(bairro)">
+      <div class="col-md-5">
+        <label for="bairro" class="control-label">Bairro</label>
+        <input
+          class="form-control"
+          type="text"
+          name="bairro"
+          id="bairro"
+          ngModel
+          required
+          #bairro="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(bairro)"
+          errorMessage="Bairro é obrigátorio"
+        ></app-campo-control-erro>
+      </div>
+      <div class="col-md-4" [ngClass]="applyCssError(cidade)">
+        <label for="cidade" class="control-label">Cidade</label>
+        <input
+          class="form-control"
+          type="text"
+          name="cidade"
+          id="cidade"
+          ngModel
+          required
+          #cidade="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(cidade)"
+          errorMessage="Cidade é obrigátorio"
+        ></app-campo-control-erro>
+      </div>
+      <div class="col-md-3" [ngClass]="applyCssError(estado)">
+        <label for="estado" class="control-label">Estado</label>
+        <input
+          class="form-control"
+          type="text"
+          name="estado"
+          id="estado"
+          ngModel
+          required
+          #estado="ngModel"
+        />
+        <app-campo-control-erro
+          [showError]="checkFieldTouch(estado)"
+          errorMessage="Estado é obrigátorio"
+        ></app-campo-control-erro>
+      </div>
     </div>
   </div>
   <button type="submit" class="btn btn-primary" [disabled]="!f.valid">
